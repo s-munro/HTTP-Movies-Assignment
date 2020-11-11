@@ -1,4 +1,5 @@
 import react from 'react';
+import axios from 'axios';
 
 const UpdateMovie = () => {
 
@@ -44,6 +45,7 @@ const UpdateMovie = () => {
             placeholder='text'
             value={} />
         </label>
+        <button>Update</button>
       </form>
     </div>
   )
