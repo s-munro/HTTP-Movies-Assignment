@@ -24,6 +24,18 @@ function Movie({ addToSavedList }) {
     addToSavedList(movie);
   };
 
+  const handleDelete = () => {
+    axios
+      .delete(`http://localhost:5000/api/movies/${movie.id}`)
+      .then((res) => {
+        setMovie(res.data);
+        push('/movies');
+      })
+      .catch((err) => {
+        console.log(err)
+      });
+  }
+
   useEffect(() => {
     fetchMovie(params.id);
   }, [params.id]);
@@ -35,14 +47,21 @@ function Movie({ addToSavedList }) {
   return (
     <div className="save-wrapper">
       <MovieCard movie={movie} />
+      <div className='button-container'>
 
-      <div className="save-button" onClick={saveMovie}>
-        Save
-      </div>
-      <div className="save-button" onClick={()=> {
-        push(`/update-movie/${movie.id}`)
-      }}>
-        Edit
+        <div className="save-button" onClick={saveMovie}>
+          Save
+        </div>
+
+        <div className="edit-button" onClick={()=> {
+          push(`/update-movie/${movie.id}`)
+        }}>
+          Edit
+        </div>
+
+        <div className="delete-button" onClick={handleDelete}>
+          Delete
+        </div>
       </div>
     </div>
   );
