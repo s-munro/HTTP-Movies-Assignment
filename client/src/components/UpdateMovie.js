@@ -14,6 +14,7 @@ const UpdateMovie = (props) => {
   const { push } = useHistory();
   const [movie, setMovie] = useState(initialMovie);
   const { id } = useParams();
+  console.log('id', id);
 
   useEffect(() => {
     axios
