@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 import axios from 'axios';
 
 const UpdateMovie = () => {
@@ -8,42 +8,42 @@ const UpdateMovie = () => {
   return(
     <div>
       <h2>Update Movie</h2>
-      <form onSubmit={}>
+      <form onSubmit={'hello'}>
 
         <label>Title
           <input
           type='text'
           name=''
-          onChange={}
+          onChange={'hello'}
           placeholder='text'
-          value={} />
+          value={'hello'} />
         </label>
 
         <label>Director
           <input
             type='text'
             name=''
-            onChange={}
+            onChange={'hello'}
             placeholder='text'
-            value={} />
+            value={'hello'} />
         </label>
 
         <label>Metascore
           <input
             type='text'
             name=''
-            onChange={}
+            onChange={'hello'}
             placeholder='text'
-            value={} />
+            value={'hello'} />
         </label>
 
         <label>Stars
           <input
             type='text'
             name=''
-            onChange={}
+            onChange={'hello'}
             placeholder='text'
-            value={} />
+            value={'hello'} />
         </label>
         <button>Update</button>
       </form>
